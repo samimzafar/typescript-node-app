@@ -1,0 +1,560 @@
+.modal-wrapper {
+  font-family: $fontFamily !important;
+}
+
+.tg-signUp-col-l {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: $modalPadding;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+  color: $white;
+  position: relative;
+
+  .tg-signup-footer-line {
+    width: 100%;
+    position: absolute;
+    bottom: $modalPadding;
+    left: 0;
+    right: $modalPadding;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+
+    .tg-signup-footer-line {
+      display: none;
+    }
+  }
+  @media (max-width: 992px) and (min-width: 768px) {
+    height: auto;
+  }
+
+  .modal-heading {
+    z-index: 2;
+    color: $white;
+  }
+
+  img {
+    width: 150px;
+    margin-bottom: 50px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: $modalPadding;
+    color: $white;
+    z-index: 2;
+  }
+
+  ul {
+    padding-left: 0 !important;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: $white;
+      z-index: 2;
+      list-style-type: none;
+    }
+  }
+
+  h3 {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .tg-signUp-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+  }
+}
+
+.footer-anchor {
+  color: $secondary !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.tg-modal-signup-screen-footer {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  div {
+    font-size: 16px !important;
+    color: $black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    a {
+      color: $secondary !important;
+      padding: 0 !important;
+      font-size: 16px !important;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tg-signup-hr {
+    height: 1px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background-light;
+  }
+
+  span {
+    font-size: 12px !important;
+    color: #aaa;
+
+    a {
+      color: $secondary !important;
+      padding: 0 !important;
+      font-size: 12px !important;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.tg-modal-signup-screen {
+  padding: 30px !important;
+  border-radius: $borderRadius8;
+  background-color: $background-light;
+
+  input {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .modal-heading {
+    padding-bottom: 30px;
+  }
+
+  .tg-modal-signup-footer {
+    text-align: center;
+
+    div {
+      font-size: 16px !important;
+      color: $black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      a {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary !important;
+          padding: 0 !important;
+          font-size: 16px !important;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .tg-signup-hr {
+      height: 1px;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background-light;
+    }
+
+    span {
+      font-size: 12px !important;
+      color: #aaa;
+
+      a {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary !important;
+          padding: 0 !important;
+          font-size: 12px !important;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.tg-signin-col-l {
+  height: 100vh;
+  background-image: url("../images/background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: $modalPadding !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  color: $white;
+  position: relative;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
+  @media (max-width: 992px) and (min-width: 768px) {
+    height: auto;
+  }
+
+  .modal-heading {
+    z-index: 2;
+    color: $white;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: $modalPadding;
+    color: $white;
+    z-index: 2;
+  }
+
+  .tg-signin-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $black;
+    opacity: 0.4;
+  }
+  img {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      width: 120px;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 992px) and (min-width: 768px) {
+      display: block;
+      width: 120px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.tg-signin-screen-col-r {
+  padding: $loginScreenPadding !important;
+
+  @media (max-width: 768px) {
+    padding: $loginScreenPaddingMbl !important;
+  }
+
+  img {
+    width: 120px;
+    margin-bottom: $modalPadding;
+  }
+
+  a {
+    cursor: pointer;
+    color: #828282;
+    font-size: 14px;
+  }
+}
+
+.tg-signup-screen-col-r {
+  padding: $loginScreenPadding !important;
+
+  @media (max-width: 768px) {
+    padding: $loginScreenPaddingMbl !important;
+  }
+
+  .tg-signup-footer-line-mbl {
+    margin-top: 30px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  img {
+    width: 120px;
+    margin-bottom: $modalPadding;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+    @media (max-width: 992px) and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  a {
+    cursor: pointer;
+    color: #828282;
+    font-size: 14px;
+  }
+}
+
+.tg-verification-div {
+  input:focus {
+    outline: none;
+    border: 1px solid $primary;
+    caret-color: $primary;
+  }
+
+  div {
+    width: auto !important;
+  }
+
+  input {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+.custom-modal-header {
+  background: $primary;
+  color: $white;
+
+  .btn-close {
+    background-color: $white;
+  }
+}
+
+.modal-heading {
+  font-weight: bold;
+  padding-bottom: $modalPadding;
+  margin-bottom: 0px;
+}
+
+.modal-body {
+  padding: 0px !important;
+
+  .tg-modal-default-pd {
+    padding: $modalPadding !important;
+  }
+
+  .tg-modal-default-pd-top {
+    padding-top: $modalPadding !important;
+  }
+
+  .tg-signin-col-l {
+    background-image: url("../images/background.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: $modalPadding !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    color: $white;
+    position: relative;
+
+    .modal-heading {
+      z-index: 2;
+      color: $white;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 0;
+      padding-bottom: $modalPadding;
+      color: $white;
+      z-index: 2;
+    }
+
+    .tg-signin-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $black;
+      opacity: 0.4;
+    }
+  }
+
+  .tg-signin-col-r {
+    padding: $modalPadding;
+
+    img {
+      width: 120px;
+      margin-bottom: $modalPadding;
+    }
+
+    a {
+      cursor: pointer;
+      color: #828282;
+      font-size: 14px;
+    }
+  }
+
+  .tg-verification-div {
+    input:focus {
+      outline: none;
+      border: 1px solid $primary;
+      caret-color: $primary;
+    }
+
+    div {
+      width: auto !important;
+    }
+
+    input {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
+
+.modal-content {
+  border-radius: $borderRadius8 !important;
+}
+
+.tg-modal-signup {
+  input {
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .tg-modal-signup-footer {
+    text-align: center;
+
+    div {
+      font-size: 16px !important;
+      color: $black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      a {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 16px !important;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary !important;
+          padding: 0 !important;
+          font-size: 16px !important;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .tg-signup-hr {
+      height: 1px;
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $background-light;
+    }
+
+    span {
+      font-size: 12px !important;
+      color: #aaa;
+
+      a {
+        color: $secondary !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary !important;
+          padding: 0 !important;
+          font-size: 12px !important;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+$breakpoint-tablet: 768px;
+
+@media (max-width: $breakpoint-tablet) {
+  .modal-body {
+    .tg-verification-div {
+      div {
+        width: auto !important;
+      }
+
+      input {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+}
+
+.logo-z-index {
+  z-index: 2;
+}

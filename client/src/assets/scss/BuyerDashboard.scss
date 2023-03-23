@@ -1,0 +1,532 @@
+.products-catalogue {
+  margin-top: 8em;
+
+  h2 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    text-align: left;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.inquiry-form {
+  padding: 40px 20px;
+
+  input:focus {
+    box-shadow: none !important;
+  }
+
+  .site-btn {
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  .show-mobile {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  .show-desktop {
+    display: block;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .btn-close {
+    outline: none;
+    border: 1px solid $border;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    box-shadow: 0 0 3px 0 $border;
+
+    &:hover {
+      box-shadow: 0 0 3px 0 $border;
+    }
+
+    &:active {
+      box-shadow: 0 0 3px 0 $border;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 0 $border;
+    }
+  }
+
+  .modal-heading {
+    text-align: left;
+
+    &.first {
+      margin-top: 0px;
+
+      @media (max-width: 767px) {
+        margin-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 992px) {
+        margin-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 30px;
+      padding-bottom: 0px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 992px) {
+      margin-top: 30px;
+      padding-bottom: 0px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .tg-inquiry-left {
+    .row-first {
+      margin-bottom: 30px;
+
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+
+      .heading-first {
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        text-align: left;
+        padding-bottom: 0;
+        font-size: 16px;
+        color: $black;
+      }
+    }
+
+    .row-second {
+      margin-bottom: 30px;
+
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+
+      .product-img {
+        width: 100%;
+        border-radius: $borderRadius8;
+        height: 70px;
+        object-fit: cover;
+      }
+
+      .product-name {
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+        text-align: left;
+        padding-bottom: 0;
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $black;
+      }
+
+      .product-country {
+        img {
+          width: 20px;
+          border: 1px solid $border;
+        }
+
+        span {
+          font-weight: 900;
+          letter-spacing: 1px;
+          margin-bottom: 0px;
+          padding-left: 5px;
+          text-align: left;
+          padding-bottom: 0;
+          font-size: 12px;
+          color: $black;
+        }
+      }
+    }
+
+    .company-box-col {
+      position: absolute;
+      bottom: 0;
+
+      @media only screen and (max-width: 992px) {
+        margin-bottom: 30px;
+        position: unset;
+        bottom: unset;
+      }
+
+      .company-box {
+        width: 100%;
+        background: $white;
+        padding: 15px;
+        border: 1px solid $border;
+        border-radius: $borderRadius8;
+        box-shadow: 0 0 3px 0 $border;
+
+        .header-div {
+          margin-bottom: 20px;
+
+          h2 {
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            text-align: left;
+            padding-bottom: 0;
+            font-size: 16px;
+            color: $black;
+          }
+
+          span {
+            box-shadow: 0px 0px 5px $secondary;
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+            background: $secondary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: $borderRadius8;
+            color: $white;
+            cursor: pointer;
+            margin-left: 10px;
+          }
+        }
+
+        p {
+          font-weight: 500;
+          letter-spacing: 1px;
+          margin-bottom: 0px;
+          text-align: left;
+          padding-bottom: 0;
+          font-size: 12px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: $black;
+
+          span {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+
+  .tg-inquiry-right {
+    form {
+      background: $border;
+      padding: 15px;
+      border-radius: $borderRadius8;
+    }
+  }
+}
+
+.section-2 {
+  margin-top: 5em;
+
+  .tg-company-div {
+    border: 1px solid $border;
+    border-radius: $borderRadius8;
+    box-shadow: 0px 0px 3px 0px $border;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-align: left;
+      font-size: 20px;
+      margin: 20px 0px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    a {
+      font-weight: 500;
+      color: $black;
+    }
+
+    .tg-company-info-div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: $black;
+      margin-bottom: 15px;
+
+      .icon-card {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        background: $border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $borderRadius8;
+        color: $black;
+        margin-right: 15px;
+      }
+
+      p {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+      }
+    }
+
+    .tg-company-img-div {
+      border: 1px solid $background-light;
+      border-radius: $borderRadius8;
+      background: $background-light;
+      position: relative;
+      padding: 10px;
+
+      img {
+        width: 80px;
+        border-radius: $borderRadius50;
+      }
+
+      span {
+        padding: 2px 8px;
+        border-radius: $borderRadius50;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &.verified {
+          background: #d3efe4;
+          color: #079024;
+        }
+
+        &.not-verified {
+          background: #ffdfd8;
+          color: $badge-error;
+        }
+      }
+    }
+  }
+
+  .recent-inquiries {
+    border: 1px solid $background-light;
+    box-shadow: 0 0 5px 0 $border;
+    border-radius: $borderRadius8;
+    background: $white;
+    padding: 20px;
+
+    .inquiry-head {
+      margin-bottom: 1em;
+
+      a {
+        font-weight: 500;
+        color: $black;
+      }
+    }
+
+    h3 {
+      font-weight: 900;
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+      text-align: center;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+    .inquiry-card {
+      padding: 15px;
+      border: 1px solid $background-light;
+      border-radius: $borderRadius8;
+      background: $background-light;
+      position: relative;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+
+        span {
+          font-weight: 400;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        line-height: 20px;
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .inquiry-status {
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 767px) {
+          justify-content: space-between;
+          margin-top: 20px;
+        }
+      }
+
+      .inquiry-posted {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        text-align: right;
+        font-size: 10px;
+        color: #878787;
+
+        @media only screen and (max-width: 767px) {
+          position: unset;
+          top: unset;
+          right: unset;
+          text-align: left;
+        }
+
+        &.desktop {
+          display: block;
+
+          @media only screen and (max-width: 767px) {
+            display: none;
+          }
+        }
+
+        &.mobile {
+          display: none;
+
+          @media only screen and (max-width: 767px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-3 {
+  margin-top: 5em;
+
+  h2 {
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+.contact-text {
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 18px;
+}
+
+.contact-us {
+  .col-div {
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-self: center;
+
+      a {
+        color: $primary;
+
+        .icon-section {
+          background-color: $secondary;
+          border-radius: $borderRadius8;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &:hover {
+          color: $white;
+
+          .icon-section {
+            background-color: $primary;
+          }
+        }
+      }
+
+      .text-div {
+        border: 1px solid $secondary;
+        border-left: 0;
+        border-radius: $borderRadius8;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+
+        p {
+          margin: 0;
+          color: $black;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.tg-profile-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+}
+
+.tg-custom-img-upload-row {
+  border: 1px solid #ced4da;
+  border-radius: $borderRadius4;
+  padding: 15px;
+  margin: 0 !important;
+
+  .image-div {
+    background-color: $white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    border-radius: $borderRadius4;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 3px 0 #ced4da;
+
+    span {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      cursor: pointer;
+      background: $secondary;
+      border-radius: $borderRadius50;
+      box-shadow: 0 0 3px 0 $secondary;
+    }
+  }
+
+  .upload-div {
+    height: 100%;
+
+    label {
+      transform-origin: 0 0;
+      transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+      opacity: 0.65;
+      transform: scale(0.85) translateY(0rem) translateX(0.15rem);
+    }
+
+    input {
+      border: 0;
+      height: auto !important;
+
+      &::-webkit-file-upload-button {
+        font-size: 12px;
+        color: black;
+        border-radius: $borderRadius4;
+        box-shadow: none;
+        border: 1px solid $border;
+        background: $border;
+      }
+    }
+  }
+
+  .uploaded-img-div {
+    background: $border;
+    border-radius: $borderRadius4;
+    padding: 3px 8px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+
+    a {
+      font-size: 12px;
+      color: $black;
+      font-weight: 500;
+      letter-spacing: 1px;
+
+      &:not([href]) {
+        font-size: 12px !important;
+        color: $black !important;
+        font-weight: 500 !important;
+        letter-spacing: 1px !important;
+        padding: 0 !important;
+      }
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      cursor: pointer;
+      background: $secondary;
+      border-radius: $borderRadius50;
+      box-shadow: 0 0 3px 0 $secondary;
+    }
+  }
+}

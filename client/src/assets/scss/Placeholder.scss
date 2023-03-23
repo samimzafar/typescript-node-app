@@ -1,0 +1,15 @@
+.placeholder {
+  border-radius: $borderRadius8;
+  background-color: #c5c5c5 !important;
+  &.height100px {
+    height: 100px;
+  }
+
+  &.height425px {
+    height: 425px;
+  }
+
+  &.height335px {
+    height: 335px;
+  }
+}

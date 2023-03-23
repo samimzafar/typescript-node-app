@@ -1,0 +1,9 @@
+{
+ "port": 4000,
+ "db": {
+   "host": "127.0.0.1",
+   "name": "Node_Typesript",
+   "username": "root",
+   "password": ""
+ }
+}

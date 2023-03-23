@@ -1,0 +1,131 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-family: "Raleway", sans-serif;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none !important;
+  user-select: none !important;
+}
+
+ul {
+  padding-left: unset !important;
+}
+
+.color-black {
+  color: $black !important;
+}
+
+.tg-primary-btn,
+.tg-primary-btn:hover {
+  background: $primary;
+  color: $white;
+}
+
+a.disabled {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+// transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+.border-custom {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error-input {
+  border-color: $badge-error !important;
+}
+
+.error-input .tg-select__control {
+  border-color: $badge-error !important;
+}
+
+.table-row-clickable {
+  div[role="row"] {
+    cursor: pointer !important;
+  }
+
+  // Show overflow in data table
+  div {
+    &:first-child {
+      overflow: visible !important;
+    }
+  }
+}
+
+.font-family-arial {
+  font-family: Arial !important;
+}
+
+.login-link-hover:hover {
+  color: $primary !important;
+}
+
+.dropdown-item:focus {
+  background-color: $white !important;
+  color: $black !important;
+}
+
+.dropdown-item.active {
+  background-color: $border !important;
+  color: $black !important;
+
+  &:focus {
+    background-color: $border !important;
+    color: $black !important;
+  }
+}
+
+button {
+  user-select: none !important;
+  border-radius: $borderRadius4 !important;
+}
+
+// Imports
+@import "./PageNotFound.scss";
+@import "./Layout.scss";
+@import "./Modal.scss";
+@import "./Loading.scss";
+@import "./HeroHeader.scss";
+@import "./style.scss";
+@import "./AddProduct.scss";
+@import "./Form.scss";
+@import "./BuyerDashboard.scss";
+@import "./AdminLayout.scss";
+@import "./Companies.scss";
+@import "./Badge.scss";
+@import "./APCard.scss";
+@import "./APButton.scss";
+@import "./Profile.scss";
+@import "./SellerDashboard.scss";
+@import "./Accordion.scss";
+@import "./Alert.scss";
+@import "./ProductCards.scss";
+@import "./Placeholder.scss";
+@import "./ViewProduct.scss";

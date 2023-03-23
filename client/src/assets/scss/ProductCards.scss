@@ -1,0 +1,319 @@
+.tg-products-cards-horizontal {
+  .tg-trending-products-col {
+    border: 1px solid $border;
+    border-radius: $borderRadius8;
+    box-shadow: 0px 0px 3px $border;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+
+    .tg-img-div {
+      background-color: $border;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      width: 350px;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      span {
+        padding: 2px 8px;
+        border-radius: $borderRadius50;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: $primary;
+        color: $white;
+      }
+    }
+
+    .tg-info-div {
+      position: absolute;
+      right: 0px;
+      background: $white;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      box-shadow: 0px 0px 5px $border;
+      height: 100%;
+
+      @media only screen and (max-width: 767px) {
+        position: unset;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+      }
+
+      .inner-div {
+        margin: 30px;
+        overflow: hidden;
+
+        .inner-name {
+          height: 50px;
+          overflow: hidden;
+
+          h2 {
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 0px;
+          }
+        }
+
+        .inner-country {
+          img {
+            width: 20px;
+            border: 1px solid $border;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+        }
+
+        .inner-price {
+          margin: 10px 0;
+
+          p {
+            font-size: 14px;
+            margin-bottom: 0;
+
+            b {
+              color: $black;
+              font-weight: 600;
+              font-size: 20px;
+            }
+
+            span {
+              color: #444;
+            }
+          }
+        }
+
+        .inner-specs {
+          font-size: 12px;
+          font-weight: 600;
+          width: 100%;
+
+          &.inner-qty {
+            margin-bottom: 1em;
+
+            p {
+              margin-bottom: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 767px) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+
+        .inner-detail {
+          position: absolute;
+          bottom: 20px;
+
+          a {
+            font-size: 16px;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tg-products-cards-vertical {
+  user-select: none;
+  min-width: 20% !important;
+  max-width: 20% !important;
+
+  @media only screen and (max-width: 767px) {
+    min-width: 50% !important;
+    max-width: 50% !important;
+  }
+
+  @media (max-width: 990px) and (min-width: 768px) {
+    min-width: 50% !important;
+    max-width: 50% !important;
+  }
+
+  @media (max-width: 1400px) and (min-width: 991px) {
+    min-width: 33.33% !important;
+    max-width: 33.33% !important;
+  }
+
+  .tg-trending-products-col {
+    border: 1px solid $border;
+    border-radius: $borderRadius8;
+    box-shadow: 0px 0px 3px $border;
+    margin: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    .tg-img-div {
+      background-color: $border;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 200px;
+      position: absolute;
+      top: 0;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        height: 100px;
+      }
+
+      span {
+        padding: 2px 8px;
+        border-radius: $borderRadius50;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: $primary;
+        color: $white;
+      }
+    }
+
+    .tg-info-div {
+      background: $white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      box-shadow: 0px 0px 5px $border;
+      z-index: 1;
+      margin-top: 190px;
+
+      @media only screen and (max-width: 767px) {
+        margin-top: 90px;
+      }
+
+      .inner-div {
+        margin: 20px;
+        overflow: hidden;
+
+        @media only screen and (max-width: 767px) {
+          margin: 10px;
+        }
+
+        .inner-name {
+          color: $black;
+          font-weight: 900;
+          letter-spacing: 1px;
+          text-align: left;
+          font-size: 20px;
+          margin-bottom: 0px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          @media only screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+        }
+
+        .inner-country {
+          img {
+            width: 20px;
+            border: 1px solid $border;
+            margin-right: 5px;
+          }
+
+          p {
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+        }
+
+        .inner-price {
+          margin: 10px 0;
+
+          p {
+            font-size: 14px;
+            margin-bottom: 0;
+
+            b {
+              color: $black;
+              font-weight: 600;
+              font-size: 20px;
+            }
+
+            span {
+              color: #444;
+            }
+          }
+        }
+
+        .inner-specs {
+          font-size: 12px;
+          font-weight: 600;
+          width: 100%;
+
+          &.inner-qty {
+            margin-bottom: 1em;
+
+            p {
+              margin-bottom: 0;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media only screen and (max-width: 767px) {
+              margin-bottom: 0px;
+            }
+          }
+        }
+
+        .inner-detail {
+          @media only screen and (max-width: 767px) {
+            display: none;
+          }
+
+          a {
+            font-size: 16px;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
