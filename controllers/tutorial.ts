@@ -90,7 +90,7 @@ export default {
       let { title, description, published }: tutorialCreateI = req.body;
       const tutorial = await Tutorials.findByPk(id);
       if (tutorial) {
-        const updatedTutorial = await Tutorials.update(req.body, { where: { id: 9 } })
+        const updatedTutorial = await tutorial.update({ title, description, published })
         await transaction.commit();
         res.send({
           status: 200,
@@ -119,7 +119,6 @@ export default {
     const transaction = await sequelize.transaction();
     try {
       const tutorial = await Tutorials.findAll({ where: { published: true } })
-      console.log("🚀 ~ file: tutorial.ts:122 ~ findAllPublished: ~ tutorial:", tutorial)
       if (tutorial) {
         await transaction.commit();
         res.send({
