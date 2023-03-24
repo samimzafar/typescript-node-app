@@ -9,5 +9,4 @@ export interface customReqI extends Request {
   log?: any;
   isAccessibleViaRole?: boolean;
   user?: InferAttributes<typeof Users>;
-  admin?: InferAttributes<typeof Users>;
 }
