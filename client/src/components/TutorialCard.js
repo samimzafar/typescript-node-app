@@ -2,13 +2,14 @@ import axios from "axios";
 import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import "../App.css";
+import { BASE_URL } from "../utils";
 
 const TutorialCard = (props) => {
   const tutorial = props.tutorial;
   console.log(tutorial);
   const onDeleteClick = (id) => {
     axios
-      .delete(`http://localhost:4000/api/tutorials/${id}`)
+      .delete(`${BASE_URL}/tutorials/${id}`)
       .then((res) => {
         Navigate("/");
       })

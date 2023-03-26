@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
+import { BASE_URL } from "../utils";
 
 function UpdateTutorial(props) {
   const [tutorial, setTutorial] = useState({
@@ -15,7 +16,7 @@ function UpdateTutorial(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/tutorials/${id}`)
+      .get(`${BASE_URL}/tutorials/${id}`)
       .then((res) => {
         setTutorial({
           title: res.data.title,

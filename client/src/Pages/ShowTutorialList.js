@@ -3,13 +3,14 @@ import "../App.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import TutorialCard from "../components/TutorialCard";
+import { BASE_URL } from "../utils";
 
 function ShowTutorialList() {
   const [tutorial, setTutorial] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/tutorials")
+      .get(`${BASE_URL}/tutorials`)
       .then((res) => {
         setTutorial(res.data.data);
       })
