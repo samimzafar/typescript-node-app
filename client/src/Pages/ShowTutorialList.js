@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import TutorialCard from "./TutorialCard";
+import TutorialCard from "../components/TutorialCard";
 
 function ShowTutorialList() {
   const [tutorial, setTutorial] = useState([]);

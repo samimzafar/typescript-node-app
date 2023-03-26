@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-import CreateTutorial from "./components/CreateTutorial";
-import ShowTutorialList from "./components/ShowTutorialList";
-import UpdateTutorial from "./components/UpdateTutorial";
+import ShowTutorialList from "./Pages/ShowTutorialList";
+import CreateTutorial from "./Pages/CreateTutorial";
+import UpdateTutorial from "./Pages/UpdateTutorial";
 
 const App = () => {
   return (

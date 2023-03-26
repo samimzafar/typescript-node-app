@@ -19,7 +19,6 @@ const CreateTutorial = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("tutorial -- -", tutorial);
     axios
       .post("http://localhost:4000/api/tutorials", tutorial)
       .then((res) => {
