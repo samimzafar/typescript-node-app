@@ -1,7 +1,7 @@
 {
-  "name": "api-boilerplate-2.0",
+  "name": "node-js-TS",
   "version": "1.0.0",
-  "description": "API boilerplate 2.0",
+  "description": "node-js-TS",
   "scripts": {
     "start": "tsc && node ./dist/server.js | ./node_modules/.bin/bunyan",
     "server": "tsc && nodemon ./dist/server.js | ./node_modules/.bin/bunyan",
