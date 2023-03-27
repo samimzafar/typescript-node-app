@@ -6,7 +6,6 @@ import { BASE_URL } from "../utils";
 
 const TutorialCard = (props) => {
   const tutorial = props.tutorial;
-  console.log(tutorial);
   const onDeleteClick = (id) => {
     axios
       .delete(`${BASE_URL}/tutorials/${id}`)
