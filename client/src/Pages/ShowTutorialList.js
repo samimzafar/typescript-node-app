@@ -22,21 +22,8 @@ function ShowTutorialList() {
     FetchTutorials();
   }, []);
   const onDeleteClick = async (tutId) => {
-    // axios
-    //   .delete(`${BASE_URL}/tutorials/${tutId}`)
-    //   .then((res) => {
-    //     setTutorial(preState => preState.filter(({ id }) => id !== +tutId));
-    //   })
-    //   .catch((err) => {
-    //     console.log("Error form ShowTutorialDetails");
-    //   });
-
     try {
-      const response = await deleteTutorialByIDApi(tutId);
-      console.log(
-        "🚀 ~ file: ShowTutorialList.js:36 ~ onDeleteClick ~ response:",
-        response
-      );
+      await deleteTutorialByIDApi(tutId);
       setTutorial((preState) => preState.filter(({ id }) => id !== +tutId));
     } catch (error) {
       console.log("Error form ShowTutorialDetails");
