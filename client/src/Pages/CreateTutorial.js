@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-
 import { useNavigate } from "react-router-dom";
+import { createTutorialsApi } from "../services/api";
 
 const CreateTutorial = (props) => {
   // Define the state with useState hook
@@ -16,27 +15,25 @@ const CreateTutorial = (props) => {
   const onChange = (e) => {
     setTutorial({ ...tutorial, [e.target.name]: e.target.value });
   };
-
+  const handleForm = async () => {
+    try {
+      await createTutorialsApi(tutorial);
+      setTutorial({
+        title: "",
+        isbn: "",
+        author: "",
+        description: "",
+        published_date: "",
+        publisher: "",
+      });
+      navigate("/");
+    } catch (error) {
+      console.log("Error in CreateTutorial!", error);
+    }
+  };
   const onSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:4000/api/tutorials", tutorial)
-      .then((res) => {
-        setTutorial({
-          title: "",
-          isbn: "",
-          author: "",
-          description: "",
-          published_date: "",
-          publisher: "",
-        });
-
-        // Push to /
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log("Error in CreateTutorial!");
-      });
+    handleForm();
   };
 
   return (

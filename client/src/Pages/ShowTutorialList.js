@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import TutorialCard from "../components/TutorialCard";
-import { BASE_URL } from "../utils";
+import { getTutorialsApi } from "../services/api";
 
 function ShowTutorialList() {
   const [tutorial, setTutorial] = useState([]);
 
+  const FetchTutorials = async () => {
+    try {
+      const response = await await getTutorialsApi();
+      setTutorial(response.data);
+    } catch (error) {
+      console.log("Error in ShowTutorialList!", error);
+    }
+  };
+
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/tutorials`)
-      .then((res) => {
-        setTutorial(res.data.data);
-      })
-      .catch((err) => {
-        console.log("Error from ShowTutorialList");
-      });
+    FetchTutorials();
   }, []);
 
   const tutorialList =

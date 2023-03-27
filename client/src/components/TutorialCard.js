@@ -21,7 +21,7 @@ const TutorialCard = (props) => {
       <img
         src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
         alt="Tutorials"
-        height={200}
+        height={220}
       />
       <div className="desc">
         <h2>

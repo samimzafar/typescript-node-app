@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
 import { BASE_URL } from "../utils";
+import { getTutorialByIDApi } from "../services/api";
 
 function UpdateTutorial(props) {
   const [tutorial, setTutorial] = useState({
@@ -14,19 +15,21 @@ function UpdateTutorial(props) {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}/tutorials/${id}`)
-      .then((res) => {
-        setTutorial({
-          title: res.data.title,
-          description: res.data.description,
-          published: res.data.published,
-        });
-      })
-      .catch((err) => {
-        console.log("Error from UpdateTutorial Info");
+  const FetchTutorialByID = async () => {
+    try {
+      const response = await getTutorialByIDApi();
+      setTutorial({
+        title: response.data?.title,
+        description: response.data?.description,
+        published: response.data?.published,
       });
+    } catch (error) {
+      console.log("Error in UpdateTutorial Info!", error);
+    }
+  };
+
+  useEffect(() => {
+    FetchTutorialByID();
   }, [id]);
 
   const onChange = (e) => {
