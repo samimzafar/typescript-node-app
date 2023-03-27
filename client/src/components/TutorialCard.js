@@ -1,21 +1,11 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 import "../App.css";
 import { BASE_URL } from "../utils";
 
 const TutorialCard = (props) => {
   const tutorial = props.tutorial;
-  const onDeleteClick = (id) => {
-    axios
-      .delete(`${BASE_URL}/tutorials/${id}`)
-      .then((res) => {
-        Navigate("/");
-      })
-      .catch((err) => {
-        console.log("Error form ShowTutorialDetails");
-      });
-  };
   return (
     <div className="card-container">
       <img
@@ -35,7 +25,7 @@ const TutorialCard = (props) => {
             type="button"
             className="btn btn-outline-danger btn-sm btn-block"
             onClick={() => {
-              onDeleteClick(tutorial.id);
+              props.handleDelete(tutorial.id);
             }}
           >
             Delete

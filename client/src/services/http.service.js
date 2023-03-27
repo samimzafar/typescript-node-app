@@ -59,3 +59,17 @@ export const update = async (url, id, data) => {
     return error.response;
   }
 };
+
+export const deleteByID = async (url, id) => {
+  try {
+    let res = null;
+    res = await axios.delete(`${url}/${id}`);
+    return {
+      status: 200,
+      success: res.data.success,
+      message: res.data.message,
+    };
+  } catch (error) {
+    return error.response;
+  }
+};
